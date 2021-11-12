@@ -1,17 +1,18 @@
+// Hooks Imports
 import React, { useState, useEffect } from 'react';
+
+// Styles Imports
 import {
 	GameWrapper,
 	GameCard,
 	Thumbnail,
 	GameHeader,
 	ShortDescription,
-	SeeButton,
 } from './GameList.styles';
+import { ButtonCard } from './GameList.styles';
 
 const GameList = () => {
 	const [games, setGames] = useState([
-		{ thumbnail: '', title: '', platform: '', short_description: '' },
-		{ thumbnail: '', title: '', platform: '', short_description: '' },
 		{ thumbnail: '', title: '', platform: '', short_description: '' },
 	]);
 
@@ -33,45 +34,28 @@ const GameList = () => {
 	}, []);
 
 	return (
-		<GameWrapper>
-			<GameCard>
-				<Thumbnail
-					src={games[0].thumbnail}
-					alt={`Thumbnail of: ${games[0].title}`}
-				/>
-				<GameHeader>
-					<h3>{games[0].title}</h3>
-					<p>{games[0].platform}</p>
-				</GameHeader>
-				<ShortDescription>{games[0].short_description}</ShortDescription>
-				<SeeButton>Ver mais</SeeButton>
-			</GameCard>
-			<GameCard>
-				<Thumbnail
-					src={games[1].thumbnail}
-					alt={`Thumbnail of: ${games[1].title}`}
-				/>
-				<GameHeader>
-					<h3>{games[1].title}</h3>
-					<p>{games[1].platform}</p>
-				</GameHeader>
-				<ShortDescription>{games[1].short_description}</ShortDescription>
-				<SeeButton>Ver mais</SeeButton>
-			</GameCard>
-			<GameCard>
-				<Thumbnail
-					src={games[2].thumbnail}
-					alt={`Thumbnail of: ${games[2].title}`}
-				/>
-				<GameHeader>
-					<h3>{games[2].title}</h3>
-					<p>{games[2].platform}</p>
-					<p>{console.log(games)}</p>
-				</GameHeader>
-				<ShortDescription>{games[2].short_description}</ShortDescription>
-				<SeeButton>Ver mais</SeeButton>
-			</GameCard>
-		</GameWrapper>
+		<>
+			<h1>DEVinMMO</h1>
+			<input type='text' />
+			<GameWrapper>
+				{games.map((item, index) => {
+					return (
+						<GameCard key={index}>
+							<Thumbnail
+								src={item.thumbnail}
+								alt={`Thumbnail of: ${item.title}`}
+							/>
+							<GameHeader>
+								<h3>{item.title}</h3>
+								<p>{item.platform}</p>
+							</GameHeader>
+							<ShortDescription>{item.short_description}</ShortDescription>
+							<ButtonCard>Ver mais</ButtonCard>
+						</GameCard>
+					);
+				})}
+			</GameWrapper>
+		</>
 	);
 };
 

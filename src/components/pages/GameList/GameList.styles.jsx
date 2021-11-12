@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from '../../styles/GlobalStyle';
 
 const GameWrapper = styled.section`
 	display: flex;
@@ -20,6 +21,7 @@ const GameCard = styled.div`
 
 const Thumbnail = styled.img`
 	width: 100%;
+	border-radius: 0.875rem 0.875rem 0 0;
 `;
 
 const GameHeader = styled.header`
@@ -27,21 +29,28 @@ const GameHeader = styled.header`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0.5rem 1.5rem;
+	margin: 1rem 0;
+
+	h3 {
+		margin: 0.25rem 0 0 0;
+		font-size: 1.4rem;
+	}
+
+	p {
+		margin: 0.2rem 0 0 0;
+		padding: 0.3rem;
+		font-size: 0.875rem;
+	}
+`;
+
+const ButtonCard = styled(Button)`
+	border: 1px solid rgba(0, 0, 0, 0.5);
 `;
 
 const ShortDescription = styled.article`
-	margin: 1rem 1.5rem;
+	margin: 0.25rem 1.5rem;
 	text-align: justify;
-`;
-
-const SeeButton = styled.button`
-	font-size: 1.25rem;
-	width: 10rem;
-	height: 2rem;
-	margin: 1rem 0;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	border-radius: 0.35rem;
+	line-height: 1.5rem;
 `;
 
 export {
@@ -49,6 +58,6 @@ export {
 	GameCard,
 	Thumbnail,
 	GameHeader,
+	ButtonCard,
 	ShortDescription,
-	SeeButton,
 };
