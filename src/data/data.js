@@ -8,6 +8,17 @@ const data = [
 		genre: 'MMORPG',
 		platform: 'PC (Windows)',
 	},
+
+	{
+		id: 452,
+		title: 'Call Of Duty: Warzone',
+		thumbnail: 'https://www.mmobomb.com/g/452/thumbnail.jpg',
+		short_description:
+			'One of the most popular FPSes in the world is now a free-to-play battle royale: Call of Duty: Warzone. Strive to become the last squad standing in Battle Royale mode, where 150 players loot and shoot their way through an ever-shrinking battlefield; or complete contracts and try to escape with the most cash in Plunder mode.',
+		genre: 'Shooter',
+		platform: 'PC (Windows)',
+	},
+
 	{
 		id: 292,
 		title: '5Street',
